@@ -26,7 +26,7 @@ class App extends Component {
     data.forEach(function(item) {
       console.log(item);
       if (item.months[m]) {
-        veggies.push(<a href={item.link}><p className="Veggie">{item.name}</p></a>);
+        veggies.push(<a href={item.link}><p className="veggie">{item.name}</p></a>);
       }
     })
 
@@ -39,13 +39,14 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="">{this.state.months[this.state.currentMonth]}</h1>
+          <p className="">{this.state.months[this.state.currentMonth]}</p>
         </header>
-        <p className="App-intro">
+        <div className="App-body">
+          <p className="title">What's in season?</p>
           {this.state.veggies}
-        </p>
+        </div>
         <footer>
-          <a href="https://cuesa.org/eat-seasonally/charts/vegetables"><p>All data from CUESA</p></a>
+          <p>All data from <a href="https://cuesa.org/eat-seasonally/charts/vegetables">CUESA.</a></p>
         </footer>
       </div>
     );
