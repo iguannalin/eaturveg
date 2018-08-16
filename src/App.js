@@ -4,14 +4,14 @@ import './App.css';
 // Data scraped from https://cuesa.org/eat-seasonally/charts/vegetables
 import data from './beautifulveggiesdata.json';
 
-const currentMonth = 9;
-
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      veggies: []
+      currentMonth: new Date().getMonth() + 1,
+      veggies: [],
+      months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
     }
   }
 
@@ -21,10 +21,11 @@ class App extends Component {
 
   getVeggies() {
     let veggies = [];
+    let m = this.state.currentMonth;
 
     data.forEach(function(item) {
       console.log(item);
-      if (item.months[currentMonth]) {
+      if (item.months[m]) {
         veggies.push(<p className="Veggie">{item.name}</p>);
       }
     })
@@ -33,13 +34,12 @@ class App extends Component {
       veggies: veggies
     })
   }
-  
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="">{this.state.months[this.state.currentMonth]}</h1>
         </header>
         <p className="App-intro">
           {this.state.veggies}
