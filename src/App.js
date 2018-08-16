@@ -25,7 +25,7 @@ class App extends Component {
     data.forEach(function(item) {
       console.log(item);
       if (item.months[currentMonth]) {
-        veggies.push(item.name);
+        veggies.push(<p className="Veggie">{item.name}</p>);
       }
     })
 
@@ -33,7 +33,7 @@ class App extends Component {
       veggies: veggies
     })
   }
-
+  
   render() {
     return (
       <div className="App">
