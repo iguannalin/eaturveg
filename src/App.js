@@ -46,7 +46,7 @@ class App extends Component {
           {this.state.veggies}
         </div>
         <footer>
-          <p>All data from <a href="https://cuesa.org/eat-seasonally/charts/vegetables">CUESA.</a></p>
+          <p>All data from <a href="https://cuesa.org/eat-seasonally/charts/vegetables">CUESA</a>.</p>
         </footer>
       </div>
     );
