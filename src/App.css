@@ -16,11 +16,13 @@
 }
 
 .dot {
-  animation: fallDown 1s ease-in-out infinite;
+  display: flex;
+  justify-content: center;
+  animation: fallDown 1.5s ease-in-out infinite alternate-reverse;
 }
 
 @keyframes fallDown {
-  50% { opacity: 0.5; transform: translate(0, 2px); }
+  0% { opacity: 1; transform: translate(0, 2px); }
   100% { opacity: 0.2; transform: translate(0, 5px); }
 }
 
