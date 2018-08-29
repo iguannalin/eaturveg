@@ -9,7 +9,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      currentMonth: new Date().getMonth() + 1,
+      currentMonth: new Date().getMonth(),
       veggies: [],
       months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
     }
@@ -39,7 +39,8 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <p className="">{this.state.months[this.state.currentMonth]}</p>
+          <p>{this.state.months[this.state.currentMonth]}</p>
+          <span className="dot">...</span>
         </header>
         <div className="App-body">
           <p className="title">What's in season?</p>

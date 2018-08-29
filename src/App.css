@@ -15,6 +15,15 @@
   color: white;
 }
 
+.dot {
+  animation: fallDown 1s ease-in-out infinite;
+}
+
+@keyframes fallDown {
+  50% { opacity: 0.5; transform: translate(0, 2px); }
+  100% { opacity: 0.2; transform: translate(0, 5px); }
+}
+
 .App-body {
   padding-top: 25px;
   padding-left: 10vw;
