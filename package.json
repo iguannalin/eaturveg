@@ -15,7 +15,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://seasons986.github.io/eaturveg/",
+  "homepage": "http://iguannalin.github.io/eaturveg/",
   "devDependencies": {
     "gh-pages": "^1.2.0"
   }
