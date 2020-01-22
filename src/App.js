@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 // Data scraped from https://cuesa.org/eat-seasonally/charts/vegetables
 import data from './beautifulveggiesdata.json';
@@ -35,11 +34,16 @@ class App extends Component {
     })
   }
 
+  getRandomVeggie() {
+    return this.state.veggies[Math.round(Math.random()*10) % this.state.veggies.length];
+  }
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <p>{this.state.months[this.state.currentMonth]}</p>
+          <span className="random-secret">(psst, try {this.getRandomVeggie()})</span>
           <span className="dot">...</span>
         </header>
         <div className="App-body">
