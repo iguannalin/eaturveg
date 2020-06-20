@@ -1,13 +1,13 @@
 @font-face {
-    font-family: "Spacey-Regular";
+    font-family: 'Spacey-Regular';
     src: url("./Spacey-Regular.ttf");
 }
 
 .App-header {
-    font-family: 'Spacey-Regular';
+    font-family: 'Spacey-Regular', sans-serif;
     text-align: center;
     background-color: #222;
-    font-size: 75px;
+    font-size: 7rem;
     padding: 10px;
     color: white;
 
@@ -21,7 +21,7 @@
 
 @media only screen and (min-width: 780px) {
     .App-header {
-        font-size: 175px !important;
+        font-size: 10rem !important;
         justify-content: space-between;
     }
 
@@ -41,10 +41,18 @@
     text-transform: lowercase !important;
 }
 
-.dot {
+.dots {
     display: flex;
     justify-content: center;
     animation: fallDown 1.5s ease-in-out infinite alternate-reverse;
+}
+
+.dots button {
+    border: none;
+    background-color: transparent;
+    font-family: 'Spacey-Regular', sans-serif;
+    font-size: 75px;
+    color: white;
 }
 
 @keyframes fallDown {
